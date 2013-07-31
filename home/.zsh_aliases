@@ -1,0 +1,90 @@
+# ZSH
+
+alias thin="nocorrect thin"
+alias thor="nocorrect thor"
+alias npm="nocorrect npm"
+alias grunt="nocorrect grunt"
+alias guard="nocorrect guard"
+alias neat="nocorrect neat"
+alias rspec="nocorrect rspec"
+alias guard="guard --no-bundler-warning"
+alias reload="source ~/.zshrc && source ~/.zsh_aliases"
+
+# RAILS
+
+alias fs="foreman start"
+alias fsd="foreman start -f Procfile.development"
+alias frc="foreman run rails console"
+alias migrate="rake db:migrate && rake db:test:migrate"
+alias rdbd="rake db:drop"
+alias rdbc="rake db:create"
+alias rdbm="rake db:migrate"
+alias rdbs="rake db:seed"
+
+# GIT
+
+alias gll="git log --pretty=format:'%C(yellow)%h %C(cyan)%ad %C(reset)%s %C(green)[%cn]' --decorate --date=short"
+alias gds="git diff --staged"
+alias gap="git add -p"
+
+unalias gclean
+function gclean () {
+  gcm &&
+  ggpull &&
+  git remote prune origin &&
+  git fetch &&
+  git branch -a --merged | grep -v -E 'master|stable|staging' | sed 's/^/git branch -d/' | sed 's/branch -d  remotes\/origin\//push origin :/'
+}
+
+# HEROKU
+
+alias he="heroku"
+alias hrake="heroku run rake"
+
+function deploy () {
+  if [ -z "$1" ]; then
+    echo 'deploy: missing required branch'
+  elif [ -z "$2" ]; then
+    echo 'deploy: missing required app'
+  else
+    git checkout $1 &&
+    git pull origin $1 &&
+    heroku maintenance:on --app $2 &&
+    git push $2 $1:master &&
+    heroku run rake db:migrate --app $2 &&
+    heroku restart --app $2 &&
+    heroku maintenance:off --app $2 &&
+    heroku open --app $2
+  fi
+}
+
+# STUFF
+
+alias zshc="subl -w ~/.zshrc"
+alias ohmy="nano ~/.oh-my-zsh"
+alias zsha="subl -w ~/.zsh_aliases"
+# alias rvm-prompt=$HOME/.rvm/bin/rvm-prompt
+alias rt="ruby -Itest"
+alias lla="ls -alh"
+
+alias duh.="du -h . | grep '\./[^/]*$'"
+
+alias myip="/sbin/ifconfig | grep 'inet ' | awk '{ print $2}'"
+alias myssh="echo -n `cat ~/.ssh/id_rsa.pub` | pbcopy"
+
+alias redisd="redis-server /usr/local/etc/redis.conf"
+alias redis="redis-cli"
+
+alias dbrestore="pg_restore --verbose --clean --no-acl --no-owner -d"
+
+alias optimg="open -a ImageOptim.app"
+
+function repeat() {
+    n=$1
+    shift
+    while [ $(( n -= 1 )) -ge 0 ]
+    do
+        "$@"
+    done
+}
+
