@@ -1,6 +1,11 @@
 # GENERAL
 
 alias edit="subl -w"
+alias lla="ls -alh"
+alias duh.="du -h . | grep '\./[^/]*$'"
+alias myip="/sbin/ifconfig | grep 'inet ' | awk '{ print $2}'"
+alias myssh="echo -n `cat ~/.ssh/id_rsa.pub` | pbcopy"
+
 
 # ZSH
 
@@ -17,6 +22,7 @@ alias reload="echo \`pwd\` > $HOME/.RELOAD && exec zsh"
 alias zshc="edit $DOTFILES/.zshrc"
 alias zsha="edit $DOTFILES/.zsh_aliases"
 
+
 # RAILS
 
 alias fs="foreman start"
@@ -27,6 +33,12 @@ alias rdbd="rake db:drop"
 alias rdbc="rake db:create"
 alias rdbm="rake db:migrate"
 alias rdbs="rake db:seed"
+
+
+# RUBY
+
+alias t="ruby -Itest"
+
 
 # GIT
 
@@ -42,6 +54,7 @@ function gclean () {
   git fetch &&
   git branch -a --merged | grep -v -E 'master|stable|staging' | sed 's/^/git branch -d/' | sed 's/branch -d  remotes\/origin\//push origin :/'
 }
+
 
 # HEROKU
 
@@ -65,28 +78,17 @@ function deploy () {
   fi
 }
 
+
 # STUFF
-
-alias t="ruby -Itest"
-alias lla="ls -alh"
-
-alias duh.="du -h . | grep '\./[^/]*$'"
-
-alias myip="/sbin/ifconfig | grep 'inet ' | awk '{ print $2}'"
-alias myssh="echo -n `cat ~/.ssh/id_rsa.pub` | pbcopy"
 
 alias redisd="redis-server /usr/local/etc/redis.conf"
 alias redis="redis-cli"
-
 alias dbrestore="pg_restore --verbose --clean --no-acl --no-owner -d"
 
 alias optimg="open -a ImageOptim.app"
 
 function repeat() {
-    n=$1
-    shift
-    while [ $(( n -= 1 )) -ge 0 ]
-    do
+    while [ $(( $1 -= 1 )) -ge 0 ]; do
         "$@"
     done
 }
