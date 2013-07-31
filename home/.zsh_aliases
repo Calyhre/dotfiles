@@ -12,7 +12,7 @@ alias guard="nocorrect guard"
 alias neat="nocorrect neat"
 alias rspec="nocorrect rspec"
 alias guard="guard --no-bundler-warning"
-alias reload="exec zsh && cd -"
+alias reload="echo \`pwd\` > $HOME/.RELOAD && exec zsh"
 
 alias zshc="edit $DOTFILES/.zshrc"
 alias zsha="edit $DOTFILES/.zsh_aliases"
