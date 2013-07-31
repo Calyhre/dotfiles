@@ -1,0 +1,6 @@
+[core]
+  editor = subl -w
+[color]
+  ui = true
+[include]
+  path = ~/.gitconfig_secret
