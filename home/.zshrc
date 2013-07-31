@@ -24,6 +24,7 @@ fi
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/usr/local/lib/node:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
