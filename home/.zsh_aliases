@@ -1,3 +1,7 @@
+# GENERAL
+
+alias edit="subl -w"
+
 # ZSH
 
 alias thin="nocorrect thin"
@@ -8,7 +12,10 @@ alias guard="nocorrect guard"
 alias neat="nocorrect neat"
 alias rspec="nocorrect rspec"
 alias guard="guard --no-bundler-warning"
-alias reload="source ~/.zshrc && source ~/.zsh_aliases"
+alias reload="exec zsh && cd -"
+
+alias zshc="edit $DOTFILES/.zshrc"
+alias zsha="edit $DOTFILES/.zsh_aliases"
 
 # RAILS
 
@@ -60,11 +67,7 @@ function deploy () {
 
 # STUFF
 
-alias zshc="subl -w ~/.zshrc"
-alias ohmy="nano ~/.oh-my-zsh"
-alias zsha="subl -w ~/.zsh_aliases"
-# alias rvm-prompt=$HOME/.rvm/bin/rvm-prompt
-alias rt="ruby -Itest"
+alias t="ruby -Itest"
 alias lla="ls -alh"
 
 alias duh.="du -h . | grep '\./[^/]*$'"

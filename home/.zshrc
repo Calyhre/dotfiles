@@ -1,6 +1,9 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="miloshadzic"
+
+DOTFILES=$HOME/.homesick/repos/dotfiles/home
 EDITOR="subl -w"
+
 COMPLETION_WAITING_DOTS="true"
 
 plugins=(git rails3)
