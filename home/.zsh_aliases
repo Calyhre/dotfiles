@@ -2,7 +2,7 @@
 
 alias edit="subl -w"
 alias lla="ls -alh"
-alias duh.="du -h . | grep '\./[^/]*$'"
+alias duh="du -h . | grep '\./[^/]*$'"
 alias myip="/sbin/ifconfig | grep 'inet ' | awk '{ print $2}'"
 alias myssh="echo -n `cat ~/.ssh/id_rsa.pub` | pbcopy"
 
