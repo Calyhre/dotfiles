@@ -46,7 +46,11 @@ alias gll="git log --pretty=format:'%C(yellow)%h %C(cyan)%ad %C(reset)%s %C(gree
 alias gds="git diff --staged"
 alias gap="git add -p"
 
-unalias gclean
+# Fix oh-my-zsh's git plugin conflict
+if type gclean > /dev/null; then
+  unalias gclean
+fi
+
 function gclean () {
   gcm &&
   ggpull &&
