@@ -93,24 +93,29 @@ function repeat() {
     done
 }
 
+function ok() {
+  echo -e "\033[32mOK\033[0m"
+}
+
+function not_ok() {
+  echo -e "\033[31mNOT OK\033[0m"
+}
+
 function update () {
   # Upgrade dotfiles
   echo -n "\nDotfiles..." &&
   $DOTFILES && ggpull --quiet > /dev/null && cd - > /dev/null &&
-  echo -e "\033[32mOK\033[0m" ||
-  echo -e "\033[31mNOT OK :(\033[0m"
+  ok || not_ok
 
   # Upgrade homebrew
   echo -n "Homebrew..." &&
   brew update > /dev/null &&
-  echo -e "\033[32mOK\033[0m" ||
-  echo -e "\033[31mNOT OK :(\033[0m"
+  ok || not_ok
 
   # Upgrade heroku toolbelt
   echo -n "Heroku....." &&
   heroku update > /dev/null &&
-  echo -e "\033[32mOK\033[0m" ||
-  echo -e "\033[31mNOT OK :(\033[0m"
+  ok || not_ok
 
   # Annnd reload!
   echo "Reload.....\n" &&
