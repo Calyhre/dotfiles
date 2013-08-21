@@ -71,6 +71,17 @@ function gclean () {
 alias he="heroku"
 alias hrake="heroku run rake"
 
+function hedumpdb () {
+  if [ -z "$1" ]; then
+    not_ok 'hedumpdb: missing required argument app name'
+  else
+    heroku pgbackups:capture --expire --app $1
+    now=`date +%Y-%m-%d`
+    backup_url=`heroku pgbackups:url --app $1`
+    curl -o $DUMPS_FOLDER/$1_$now.dump $backup_url
+  fi
+}
+
 function deploy () {
   if [ -z "$1" ]; then
     echo 'deploy: missing required branch'
@@ -96,6 +107,18 @@ alias redis="redis-cli"
 alias dbrestore="pg_restore --verbose --clean --no-acl --no-owner -d"
 
 alias optimg="open -a ImageOptim.app"
+
+function dumpdb () {
+  if [ -z "$1" ]; then
+    not_ok 'dumpdb: missing required argument database name'
+  else
+    if [ -z "$2" ]; then
+      not_ok 'dumpdb: missing required argument dump file'
+    else
+      pg_dump -Fc $1 > $2_`date +%Y-%m-%d`.dump
+    fi
+  fi
+}
 
 function repeat() {
     while [ $(( $1 -= 1 )) -ge 0 ]; do
