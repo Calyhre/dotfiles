@@ -104,11 +104,19 @@ function repeat() {
 }
 
 function ok() {
-  echo -e "\033[32mOK\033[0m"
+  if [ -z "$1" ]; then
+    echo -e "\033[32mOK\033[0m"
+  else
+    echo -e "\033[32m$1\033[0m"
+  fi
 }
 
 function not_ok() {
-  echo -e "\033[31mNOT OK\033[0m"
+  if [ -z "$1" ]; then
+    echo -e "\033[31mNOT OK\033[0m"
+  else
+    echo -e "\033[31m$1\033[0m"
+  fi
 }
 
 function update () {
