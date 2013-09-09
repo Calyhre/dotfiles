@@ -20,7 +20,7 @@ alias guard="nocorrect guard"
 alias neat="nocorrect neat"
 alias rspec="nocorrect rspec"
 alias guard="guard --no-bundler-warning"
-alias reload="echo \`pwd\` > $HOME/.RELOAD && exec zsh"
+alias reload="echo \`pwd\` > $HOME/.RELOAD && source ~/.zshrc"
 
 alias zshc="edit $DOTFILES/.zshrc"
 alias zsha="edit $DOTFILES/.zsh_aliases"
