@@ -94,7 +94,6 @@ function deploy () {
     heroku maintenance:on --app $2 &&
     git push $2 $1:master &&
     heroku run rake db:migrate --app $2 &&
-    heroku restart --app $2 &&
     heroku maintenance:off --app $2 &&
     heroku open --app $2
   fi
