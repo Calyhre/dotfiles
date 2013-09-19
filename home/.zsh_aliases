@@ -7,6 +7,7 @@ alias myip="/sbin/ifconfig | grep 'inet ' | awk '{ print $2}'"
 alias myssh="echo -n `cat ~/.ssh/id_rsa.pub` | pbcopy"
 alias dnsflush="sudo killall -HUP mDNSResponder"
 alias serve="python -m SimpleHTTPServer"
+alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
 
 
 # ZSH
