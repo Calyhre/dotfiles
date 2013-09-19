@@ -8,6 +8,7 @@ alias myssh="echo -n `cat ~/.ssh/id_rsa.pub` | pbcopy"
 alias dnsflush="sudo killall -HUP mDNSResponder"
 alias serve="python -m SimpleHTTPServer"
 alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
+alias sshc="edit ~/.ssh/config"
 
 
 # ZSH
@@ -20,7 +21,7 @@ alias guard="nocorrect guard"
 alias neat="nocorrect neat"
 alias rspec="nocorrect rspec"
 alias guard="guard --no-bundler-warning"
-alias reload="echo \`pwd\` > $HOME/.RELOAD && exec zsh"
+alias reload="echo \`pwd\` > $HOME/.RELOAD && source ~/.zshrc"
 
 alias zshc="edit $DOTFILES/.zshrc"
 alias zsha="edit $DOTFILES/.zsh_aliases"
