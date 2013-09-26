@@ -70,6 +70,7 @@ function gclean () {
 # HEROKU
 
 alias he="heroku"
+alias hew="watch heroku ps --app"
 alias hrake="heroku run rake"
 
 function hedumpdb () {
