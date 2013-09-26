@@ -1,0 +1,63 @@
+{
+	"color_scheme": "Packages/RailsCasts Colour Scheme/RailsCastsColorScheme.tmTheme",
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		".DS_Store",
+		"._.*",
+		"*.png",
+		"*.jpg",
+		"*.ico",
+		"*.jpeg",
+		"*.gif",
+		".tags*",
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.pdf",
+		".tags",
+		".gemtags"
+	],
+	"folder_exclude_patterns":
+	[
+		"*.sass-cache",
+		"*.rbx",
+		"node_modules",
+		".git",
+		"vendor/bundle",
+		".bundle"
+	],
+	"font_face": "DejaVu Sans Mono",
+	"font_size": 12,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Gist",
+		"Vintage"
+	],
+	"insert_newline_at_end_of_file": true,
+	"save_on_focus_lost": true,
+	"scroll_past_end": true,
+	"soda_classic_tabs": true,
+	"tab_size": 2,
+	"theme": "Soda Dark 3.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": true
+}
