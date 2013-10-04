@@ -26,6 +26,8 @@ alias reload="echo \`pwd\` > $HOME/.RELOAD && source ~/.zshrc"
 alias zshc="edit $DOTFILES/.zshrc"
 alias zsha="edit $DOTFILES/.zsh_aliases"
 
+alias gitc="edit $DOTFILES/.gitconfig"
+
 
 # RAILS
 
