@@ -80,6 +80,7 @@ function hedumpdb () {
     heroku pgbackups:capture --expire --app $1
     now=`date +%Y-%m-%d`
     backup_url=`heroku pgbackups:url --app $1`
+    ok $backup_url
     curl -o $DUMPS_FOLDER/$1_$now.dump $backup_url
   fi
 }

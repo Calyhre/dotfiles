@@ -1,5 +1,6 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="miloshadzic"
+DUMPS_FOLDER=$HOME/Developer/dumps
 
 DOTFILES=$HOME/.homesick/repos/dotfiles/home
 EDITOR="subl -w"
