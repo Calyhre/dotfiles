@@ -5,3 +5,16 @@
   ui = true
 [include]
   path = ~/.gitconfig_secret
+
+
+# autostash will stash a dirty tree, rebase, then unstash
+[rebase]
+  autostash = true
+
+# pull will do a rebase instead of a merge
+[pull]
+    rebase = true
+
+# merge is looking harder for renames
+[merge]
+  renamelimit = 3000
