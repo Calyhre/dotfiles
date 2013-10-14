@@ -52,6 +52,11 @@
 		"Vintage"
 	],
 	"insert_newline_at_end_of_file": true,
+	"rulers":
+	[
+		80,
+		120
+	],
 	"save_on_focus_lost": true,
 	"scroll_past_end": true,
 	"soda_classic_tabs": true,
@@ -59,6 +64,5 @@
 	"theme": "Soda Dark 3.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"word_wrap": true,
-	"rulers": [80, 120]
+	"word_wrap": true
 }
