@@ -1,6 +1,7 @@
 {
 	"extensions":
 	[
-		"rabl"
+		"rabl",
+		"Guardfile"
 	]
 }
