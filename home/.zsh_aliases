@@ -9,6 +9,12 @@ alias dnsflush="sudo killall -HUP mDNSResponder"
 alias serve="python -m SimpleHTTPServer"
 alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
 alias sshc="edit ~/.ssh/config"
+alias gemc="edit ~/.gemrc"
+
+
+# CURL
+
+alias get="curl -O"
 
 alias workon="echo \`pwd\` > $HOME/.WORK_ON"
 alias workoff="rm $HOME/.WORK_ON"
@@ -55,6 +61,7 @@ alias t="ruby -Itest"
 # GIT
 
 alias gll="git log --pretty=format:'%C(yellow)%h %C(cyan)%ad %C(reset)%s %C(green)[%cn]' --decorate --date=short --graph"
+alias gd="git diff --ignore-space-at-eol -b -w --ignore-blank-lines"
 alias gds="git diff --staged"
 alias gap="git add -p"
 

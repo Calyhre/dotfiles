@@ -2,6 +2,7 @@
 	"extensions":
 	[
 		"rabl",
-		"Guardfile"
+		"Guardfile",
+		"ru"
 	]
 }
