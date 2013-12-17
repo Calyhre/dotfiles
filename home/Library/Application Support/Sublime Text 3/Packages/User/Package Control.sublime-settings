@@ -2,6 +2,7 @@
 	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
+		"AdvancedNewFile",
 		"CoffeeScript",
 		"Emmet",
 		"Gist",
@@ -15,6 +16,7 @@
 		"Sass",
 		"SideBarEnhancements",
 		"SublimeGit",
-		"Theme - Soda"
+		"Theme - Soda",
+		"Zen Tabs"
 	]
 }
