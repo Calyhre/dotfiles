@@ -39,11 +39,13 @@ alias gitc="edit $DOTFILES/.gitconfig"
 
 # RAILS
 
-alias fs="foreman start"
-alias fsd="foreman start -f Procfile.development"
-alias frc="foreman run rails console"
-alias frg="foreman run guard"
-alias frr="foreman run rake"
+alias be="bundle exec"
+alias fs="be foreman start"
+alias fsd="be foreman start -f Procfile.development"
+alias fr="be foreman run"
+alias frc="be foreman run rails console"
+alias frg="be foreman run guard"
+alias frr="be foreman run ruby"
 alias sss="RAILS_ENV=test rake sunspot:solr:start"
 alias rdbd="rake db:drop"
 alias rdbc="rake db:create"
