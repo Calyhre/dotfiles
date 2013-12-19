@@ -28,11 +28,11 @@ export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 eval "$(rbenv init - --no-rehash)"
 
 # Change dir
-if [ -f ~/.WORK_ON ]; then
-  cd $(cat ~/.WORK_ON)
-elif [ -f ~/.RELOAD ]; then
+if [ -f ~/.RELOAD ]; then
   cd $(cat ~/.RELOAD)
   rm ~/.RELOAD
+elif [ -f ~/.WORK_ON ]; then
+  cd $(cat ~/.WORK_ON)
 elif [ -d ~/Developer/ ]; then
   cd ~/Developer/
 fi
