@@ -5,11 +5,6 @@
 	[
 		".DS_Store",
 		"._.*",
-		"*.png",
-		"*.jpg",
-		"*.ico",
-		"*.jpeg",
-		"*.gif",
 		".tags*",
 		"*.pyc",
 		"*.pyo",
@@ -40,7 +35,10 @@
 		"node_modules",
 		".git",
 		"vendor/bundle",
-		".bundle"
+		".bundle",
+		"tmp",
+		"log",
+		"bin"
 	],
 	"font_face": "DejaVu Sans Mono",
 	"font_size": 12,
