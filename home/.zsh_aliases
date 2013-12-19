@@ -123,7 +123,7 @@ alias dbrestore="pg_restore --verbose --clean --no-acl --no-owner -d"
 
 alias optimg="open -a ImageOptim.app"
 
-function dumpdb () {
+function dbdump () {
   if [ -z "$1" ]; then
     not_ok 'dumpdb: missing required argument database name'
   else
