@@ -7,7 +7,7 @@ EDITOR="subl -w"
 
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git rails3)
+plugins=(git rails)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -19,6 +19,7 @@ fi
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/usr/local/lib/node:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
