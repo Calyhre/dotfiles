@@ -38,7 +38,8 @@
 		".bundle",
 		"tmp",
 		"log",
-		"bin"
+		"bin",
+		".bin"
 	],
 	"font_face": "DejaVu Sans Mono",
 	"font_size": 12,
