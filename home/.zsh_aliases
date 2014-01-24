@@ -54,11 +54,94 @@ alias rdbtp="rake db:test:prepare"
 alias rdbs="rake db:seed"
 alias dbreset="rdbd && rdbc && rdbm && rdbtp"
 
+function rails_init () {
+  if [ -z "$1" ]; then
+    not_ok 'rails_init: missing app name argument'
+    return -1
+  fi
+
+  ( echo -n "Initializing folder and env..."
+  mkdir $1 && cd $1 && rbenv_init &&
+  gem install bundler > /dev/null &&
+  gem install rails > /dev/null &&
+  touch .env &&
+  ok || not_ok ) &&
+
+  cd $1 &&
+
+  ( echo -n "Generate rails app and repo..."
+  rails new . > /dev/null &&
+  git init .  > /dev/null &&
+  gi rails,osx > .gitignore &&
+  ok || not_ok ) &&
+
+  ( echo -n "Customize app and Gemfile....."
+  echo "
+
+# Always ignore important files
+/config/database.yml
+/.env
+" >> .gitignore &&
+  dbyml_init config/database.yml `whoami` &&
+  dbyml_init config/database.yml.tmpl &&
+  mv README.rdoc README.md &&
+  subl . &&
+  edit Gemfile &&
+  ok || not_ok ) &&
+
+  ( echo -n "Initialize bundle and DB....."
+  bundle > /dev/null &&
+  rake db:create  > /dev/null &&
+  ok || not_ok ) &&
+
+  echo -n "Finalization..................."
+  ga . && gc -m 'Initial commit'  > /dev/null &&
+  ok || not_ok
+
+  workon
+}
+
+function dbyml_init () {
+  if [ -z "$1" ]; then
+    not_ok 'dbyml_init: missing output database.yml file'
+    return -1
+  fi
+
+  if [ -z "$2" ]; then
+    user="{username}"
+  else
+    user=$2
+  fi
+
+  echo "development:
+  adapter: postgresql
+  encoding: unicode
+  database: `basename $PWD`_development
+  username: $user
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: `basename $PWD`_test
+  username: $user
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: `basename $PWD`_production
+  username: $user
+" > $1
+}
+
 
 # RUBY
 
 alias t="ruby -Itest"
 
+function rbenv_init () {
+  echo `basename $PWD` > .rbenv-gemsets &&
+  echo `rbenv version | awk '{print $1;}'` > .ruby-version
+}
 
 # GIT
 
@@ -79,6 +162,13 @@ function gclean () {
    git branch -a --merged | grep -v -E 'master|stable|staging|pull|'`git rev-parse --abbrev-ref HEAD` | sed 's/^/git branch -d/' | sed 's/branch -d  remotes\/origin\//push origin :/'
  }
 
+function gi() {
+  if [ -z "$1" ]; then
+    not_ok 'gitignore: you must provide operating system, programming language, or IDE keywords'
+  else
+    curl --silent http://www.gitignore.io/api/$1
+  fi
+}
 
 # HEROKU
 
