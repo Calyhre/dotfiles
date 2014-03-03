@@ -1,5 +1,5 @@
 [core]
-  editor = subl -w
+  editor = nano
 	excludesfile = ~/.gitignore
 [color]
   ui = true
