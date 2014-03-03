@@ -1,4 +1,16 @@
 [
-  { "keys": ["super+alt+b"], "command": "insert_snippet", "args": {"contents": "<b>${0:$SELECTION}</b>" } },
-  { "keys": ["alt+m"], "command": "markdown_preview", "args": {"target": "browser", "parser":"markdown"} }
+  {
+    "keys": ["super+alt+b"],
+    "command": "insert_snippet",
+    "args": {"contents": "<b>${0:$SELECTION}</b>" }
+  },
+  {
+    "keys": ["alt+m"],
+    "command": "markdown_preview",
+    "args": {"target": "browser", "parser":"markdown"}
+  },
+  {
+    "keys": ["ctrl+alt+d"],
+    "command": "dev_docs_search_from_input"
+  },
 ]

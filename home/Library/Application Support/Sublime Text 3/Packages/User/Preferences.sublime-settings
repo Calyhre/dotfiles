@@ -47,8 +47,8 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Vintage",
-		"Gist"
+		"Gist",
+		"Vintage"
 	],
 	"insert_newline_at_end_of_file": true,
 	"rulers":
@@ -58,6 +58,8 @@
 	],
 	"save_on_focus_lost": true,
 	"scroll_past_end": true,
+	"show_encoding": true,
+	"show_line_endings": true,
 	"soda_classic_tabs": true,
 	"tab_size": 2,
 	"theme": "Soda Dark 3.sublime-theme",
