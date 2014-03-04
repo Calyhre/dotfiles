@@ -1,0 +1,31 @@
+'release-notes':
+  'viewedVersion': '0.65.0'
+'welcome':
+  'showOnStartup': false
+'editor':
+  'fontFamily': 'DejaVu Sans Mono'
+  'fontSize': 12
+  'showInvisibles': true
+'core':
+  'themes': [
+    'atom-dark-ui'
+    'railscast-theme'
+  ]
+  'ignoredNames': [
+    '.git'
+    '.svn'
+    '.DS_Store'
+  ]
+  'disabledPackages': [
+    'metrics'
+    'exception-reporting'
+    'feedback'
+  ]
+'autosave':
+  'enabled': true
+'spell-check':
+  'grammars': [
+    'source.gfm'
+    'text.git-commit'
+    'text.plain'
+  ]

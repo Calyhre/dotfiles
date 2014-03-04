@@ -1,0 +1,71 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed.
+ *
+ * If you are unfamiliar with LESS, you can read more about it here:
+ * http://www.lesscss.org
+ */
+
+.tab-bar {
+  .tab {
+    border-top-right-radius: 6px;
+    -webkit-transform: skewX(20deg);
+
+    &:before {
+      border-top-left-radius: 6px;
+      -webkit-transform: skewX(140deg);
+    }
+  }
+}
+
+.tree-view {
+  font-size: 11px;
+  .list-tree li.list-nested-item > .list-item, .list-tree li:not(.list-nested-item).status-added {
+    color: #aaaaaa;
+  }
+}
+
+.editor {
+  .gutter {
+    background: rgba(255, 255, 255, 0.05);
+    border-right: 2px solid rgba(255, 255, 255, 0.04);
+  }
+  .line{
+    .invisible-character {
+      opacity: .05;
+
+      &:last-child {
+        opacity: 0;
+      }
+    }
+  }
+
+  .line-number.cursor-line-no-selection {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .invalid.illegal {
+    color: #fff;
+    background: #DA2C43;
+    opacity: 0.9;
+  }
+
+  .markup.underline.link.hyperlink {
+    color: #F9EE98;
+    text-decoration: underline;
+  }
+}
+.item-views > .editor {
+  &.is-focused {
+    .cursor.blink-off {
+      visibility: visible;
+    }
+  }
+
+  .cursor {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+  }
+}
