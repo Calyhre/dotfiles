@@ -54,3 +54,9 @@ Procfile.development
 
 mongoid.yml
 database.yml
+.cache/
+
+# Atom specific #
+#################
+.atom/.node-gyp/
+.atom/storage/

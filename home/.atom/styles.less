@@ -8,22 +8,10 @@
  * http://www.lesscss.org
  */
 
-.tab-bar {
-  .tab {
-    border-top-right-radius: 6px;
-    -webkit-transform: skewX(20deg);
-
-    &:before {
-      border-top-left-radius: 6px;
-      -webkit-transform: skewX(140deg);
-    }
-  }
-}
-
 .tree-view {
   font-size: 11px;
-  .list-tree li.list-nested-item > .list-item, .list-tree li:not(.list-nested-item).status-added {
-    color: #aaaaaa;
+  .list-tree li.list-nested-item > .list-item {
+    line-height: 22px;
   }
 }
 
@@ -34,7 +22,7 @@
   }
   .line{
     .invisible-character {
-      opacity: .05;
+      opacity: .1;
 
       &:last-child {
         opacity: 0;
@@ -59,13 +47,16 @@
 }
 .item-views > .editor {
   &.is-focused {
-    .cursor.blink-off {
-      visibility: visible;
+    .cursor {
+      &.blink-off {
+        visibility: visible;
+      }
     }
   }
 
   .cursor {
     background-color: rgba(255, 255, 255, 0.2);
     border: none;
+    visibility: visible;
   }
 }

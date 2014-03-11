@@ -8,24 +8,44 @@
   'showInvisibles': true
 'core':
   'themes': [
-    'atom-dark-ui'
+    'atom-soda-dark-ui'
     'railscast-theme'
   ]
   'ignoredNames': [
     '.git'
     '.svn'
     '.DS_Store'
+    '.cache'
+    '.sass-cache'
   ]
   'disabledPackages': [
     'metrics'
     'exception-reporting'
     'feedback'
+    'language-c'
+    'language-gfm'
+    'language-go'
+    'language-java'
+    'language-make'
+    'language-objective-c'
+    'language-perl'
+    'language-property-list'
+    'language-python'
+    'language-sql'
+    'language-toml'
+    'link'
+    'release-notes'
+    'snippets'
+    'welcome'
   ]
-'autosave':
-  'enabled': true
+'autosave': {}
 'spell-check':
   'grammars': [
     'source.gfm'
     'text.git-commit'
     'text.plain'
   ]
+'tree-view':
+  'hideIgnoredNames': true
+'whitespace':
+  'ignoreWhitespaceOnCurrentLine': false

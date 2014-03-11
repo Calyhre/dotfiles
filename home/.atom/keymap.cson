@@ -22,3 +22,6 @@
   # Fucking Sublime habits ...
   'alt-shift-up':   'core:select-up'
   'alt-shift-down': 'core:select-down'
+
+'body':
+  'ctrl-alt-z': 'pane:split-left'
