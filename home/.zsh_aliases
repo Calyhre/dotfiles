@@ -1,6 +1,6 @@
 # GENERAL
 
-alias edit="subl -w"
+alias edit="atom"
 alias lla="ls -alh"
 alias duh="du -h . | grep '\./[^/]*$'"
 alias myip="/sbin/ifconfig | grep 'inet ' | awk '{ print $2}'"

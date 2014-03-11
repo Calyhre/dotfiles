@@ -3,7 +3,8 @@ ZSH_THEME="miloshadzic"
 DUMPS_FOLDER=$HOME/Developer/dumps
 
 DOTFILES=$HOME/.homesick/repos/dotfiles/home
-EDITOR="subl -w"
+ATOMFILES=$HOME/.atom
+EDITOR="atom"
 
 COMPLETION_WAITING_DOTS="true"
 
