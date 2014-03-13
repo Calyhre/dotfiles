@@ -22,10 +22,9 @@
   }
   .line{
     .invisible-character {
-      opacity: .1;
-
-      &:last-child {
-        opacity: 0;
+      color: transparent;
+      &.leading-whitespace {
+        color: rgba(255, 255, 255, 0.08);
       }
     }
   }
@@ -44,6 +43,10 @@
     color: #F9EE98;
     text-decoration: underline;
   }
+
+  .wrap-guide {
+    background: rgba(255, 255, 255, 0.05);
+  }
 }
 .item-views > .editor {
   &.is-focused {
@@ -52,6 +55,12 @@
         visibility: visible;
       }
     }
+    .line.cursor-line {
+      background: rgba(255, 255, 255, 0.04);
+    }
+  }
+  .line.cursor-line {
+    background: rgba(255, 255, 255, 0.02);
   }
 
   .cursor {
