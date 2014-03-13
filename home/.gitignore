@@ -60,3 +60,4 @@ database.yml
 #################
 .atom/.node-gyp/
 .atom/storage/
+.atom/packages/
