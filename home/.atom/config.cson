@@ -50,3 +50,5 @@
   'hideIgnoredNames': true
 'whitespace':
   'ignoreWhitespaceOnCurrentLine': false
+'zentabs':
+  'maximumOpenedTabs': 10
