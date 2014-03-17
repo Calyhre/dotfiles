@@ -17,6 +17,7 @@
     '.DS_Store'
     '.cache'
     '.sass-cache'
+    'tmp'
   ]
   'disabledPackages': [
     'metrics'
