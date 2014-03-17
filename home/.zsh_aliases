@@ -171,6 +171,32 @@ function gi() {
   fi
 }
 
+function gpr() {
+  from_owner=`git remote -v | grep '^origin.*fetch)$' | sed -n -e 's/\(.*\)git@github.com:\(.*\)\/\(.*\)(fetch)/\2/p'`
+  from_branch=`git rev-parse --abbrev-ref HEAD`
+
+  if [ -z "$1" ]; then
+    to_owner=$from_owner
+  else
+    to_owner=$1
+  fi
+
+  if [ -z "$2" ]; then
+    to_branch=master
+  else
+    to_branch=$2
+  fi
+
+  read "?Make a PR to $to_owner:$to_branch from $from_owner:$from_branch ? "
+  if [[ ! $REPLY =~ ^[Yy]$ ]]
+  then
+    return -1
+  else
+    ggpush &&
+    hub pull-request -b $to_owner:$to_branch -h $from_owner:$from_branch
+  fi
+}
+
 # HEROKU
 
 alias he="heroku"
