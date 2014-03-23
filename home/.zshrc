@@ -8,7 +8,7 @@ EDITOR="atom"
 
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git rails zsh-syntax-highlighting)
+plugins=(git rails rake-fast zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
