@@ -18,6 +18,8 @@
     '.cache'
     '.sass-cache'
     'tmp'
+    '.bundle'
+    'log'
   ]
   'disabledPackages': [
     'metrics'
