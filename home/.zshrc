@@ -4,6 +4,7 @@ DUMPS_FOLDER=$HOME/Developer/dumps
 
 DOTFILES=$HOME/.homesick/repos/dotfiles/home
 ATOMFILES=$HOME/.atom
+SCRIPTS=$HOME/.scripts
 EDITOR="atom"
 
 COMPLETION_WAITING_DOTS="true"

@@ -201,6 +201,7 @@ function gpr() {
 alias he="heroku"
 alias hew="watch heroku ps --app"
 alias hrake="heroku run rake"
+alias deploy="$SCRIPTS/deploy.rb"
 
 function hedumpdb () {
   if [ -z "$1" ]; then
@@ -214,7 +215,7 @@ function hedumpdb () {
   fi
 }
 
-function deploy () {
+function deploy_migrate () {
   if [ -z "$1" ]; then
     echo 'deploy: missing required branch'
   elif [ -z "$2" ]; then
