@@ -6,7 +6,7 @@ require 'git'
 require "highline/import"
 
 git = Git.open Dir.pwd
-heroku_remotes = git.remotes.select{|r| r.url.include? 'git@heroku.com:'}
+heroku_remotes = git.remotes.select{|r| r.url.include? 'git@heroku'}
 
 if heroku_remotes.empty?
   abort 'No heroku remote was found'
