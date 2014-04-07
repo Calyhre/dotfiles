@@ -5,6 +5,54 @@ trap("SIGINT") { puts "\n"; exit! }
 require 'logger'
 require 'git'
 require 'highline/import'
+require 'optparse'
+require 'optparse/time'
+require 'ostruct'
+require 'pp'
+
+class OptionsParser
+  CODES = %w[iso-2022-jp shift_jis euc-jp utf8 binary]
+  CODE_ALIASES = { "jis" => "iso-2022-jp", "sjis" => "shift_jis" }
+
+  def self.parse(args)
+    # The options specified on the command line will be collected in *options*.
+    # We set default values here.
+    options = OpenStruct.new
+    options.filter_host = 'git@heroku'
+
+    opts = OptionParser.new do |opts|
+      opts.banner =   "Usage: deploy [options] [remote]"
+      opts.banner +=  "\nWill deploy current branch on remote"
+
+      opts.separator ""
+      opts.separator "Specific options:"
+
+      # Optional argument with keyword completion.
+      opts.on('-f', "--filter [PATTERN]", "Filter remotes urls with PATTERN", "  default: git@heroku") do |t|
+        options.filter_host = t
+      end
+
+      opts.separator ""
+      opts.separator "Common options:"
+
+      # No argument, shows at tail.  This will print an options summary.
+      # Try it and see!
+      opts.on_tail("-h", "--help", "Show this message") do
+        puts opts
+        exit
+      end
+
+      # Another typical switch to print the version.
+      opts.on_tail("--version", "Show version") do
+        puts OptionParser::Version.join('.')
+        exit
+      end
+    end
+
+    opts.parse!(args)
+    options
+  end  # parse()
+end
 
 def are_you_sure?( question )
   print "#{question} [y/n]: "
