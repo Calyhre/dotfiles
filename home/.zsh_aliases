@@ -11,6 +11,7 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 alias sshc="edit ~/.ssh/config"
 alias gemc="edit ~/.gemrc"
 
+alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
 
 # CURL
 
