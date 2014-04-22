@@ -4,6 +4,7 @@
   'fontFamily': 'DejaVu Sans Mono'
   'fontSize': 12
   'showInvisibles': true
+  'preferredLineLength': 79
 'core':
   'themes': [
     'atom-soda-dark-ui'
