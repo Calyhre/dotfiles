@@ -14,9 +14,9 @@ plugins=(git rails rake-fast zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # LOAD ALL ALIASES
-if [ -f ~/.zsh_aliases ]; then
-   source ~/.zsh_aliases
-fi
+[ -f ~/.zsh_aliases ] && source ~/.zsh_aliases
+# LOAD TRAVIS
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
 export PATH=".bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
