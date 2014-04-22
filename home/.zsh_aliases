@@ -13,6 +13,15 @@ alias gemc="edit ~/.gemrc"
 
 alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
 
+function mcd() {
+  if [ -z "$1" ]; then
+    not_ok 'mcd: missing directory name'
+    return -1
+  fi
+
+  mkdir $1 && cd $1
+}
+
 # CURL
 
 alias get="curl -O"
