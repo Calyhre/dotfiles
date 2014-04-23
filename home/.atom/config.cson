@@ -41,7 +41,8 @@
     'snippets'
     'welcome'
   ]
-'autosave': {}
+'autosave':
+  'enabled': true
 'spell-check':
   'grammars': [
     'source.gfm'
@@ -54,3 +55,5 @@
   'ignoreWhitespaceOnCurrentLine': false
 'zentabs':
   'maximumOpenedTabs': 10
+'atom-bitcoin':
+  'interval': 30
