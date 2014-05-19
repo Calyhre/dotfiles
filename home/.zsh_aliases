@@ -47,10 +47,13 @@ alias zsha="edit $DOTFILES/.zsh_aliases"
 
 alias gitc="edit $DOTFILES/.gitconfig"
 
+# RUBY
+
+alias be="bundle exec"
+alias bem="bundle exec middleman"
 
 # RAILS
 
-alias be="bundle exec"
 alias fs="be foreman start"
 alias fsd="be foreman start -f Procfile.development"
 alias fr="be foreman run"
