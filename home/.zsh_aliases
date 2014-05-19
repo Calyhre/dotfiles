@@ -28,7 +28,7 @@ alias get="curl -O"
 
 alias workon="echo \`pwd\` > $HOME/.WORK_ON"
 alias workoff="rm $HOME/.WORK_ON"
-alias workcd="cd $(cat ~/.WORK_ON)"
+alias workcd="cd \`cat ~/.WORK_ON\`"
 
 # ZSH
 
