@@ -63,3 +63,5 @@ database.yml
 .atom/.node-gyp/
 .atom/storage/
 .atom/packages/
+.atom/compile-cache/
+.atom/gist-it.token
