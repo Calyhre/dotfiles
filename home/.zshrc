@@ -18,14 +18,16 @@ source $ZSH/oh-my-zsh.sh
 # LOAD TRAVIS
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
-export PATH=".bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/usr/local/lib/node:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.cabal/bin:$PATH"
 export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+export PATH=".bin:$PATH"
+export PATH="./bin:$PATH"
 
 eval "$(rbenv init - --no-rehash)"
 
