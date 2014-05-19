@@ -2,9 +2,9 @@
   'showOnStartup': false
 'editor':
   'fontFamily': 'DejaVu Sans Mono'
-  'fontSize': 12
   'showInvisibles': true
   'preferredLineLength': 79
+  'fontSize': 12
 'core':
   'themes': [
     'atom-soda-dark-ui'
