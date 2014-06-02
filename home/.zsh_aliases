@@ -214,7 +214,6 @@ function gpr() {
 alias he="heroku"
 alias hew="watch heroku ps --app"
 alias hrake="heroku run rake"
-alias deploy="$SCRIPTS/deploy.rb"
 
 function hedumpdb () {
   if [ -z "$1" ]; then

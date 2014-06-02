@@ -55,5 +55,6 @@
   'ignoreWhitespaceOnCurrentLine': false
 'zentabs':
   'maximumOpenedTabs': 10
+  'neverCloseUnsaved': true
 'atom-bitcoin':
   'interval': 30
