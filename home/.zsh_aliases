@@ -26,9 +26,16 @@ function mcd() {
 
 alias get="curl -O"
 
-alias workon="echo \`pwd\` > $HOME/.WORK_ON"
-alias workoff="rm $HOME/.WORK_ON"
-alias workcd="cd \`cat ~/.WORK_ON\`"
+alias workcd="cd \`cat $HOME/.WORK_ON\`"
+alias workpwd="cat $HOME/.WORK_ON"
+alias workoff="rm $HOME/.WORK_ON && rm $HOME/Work\ on"
+alias workon="echo \`pwd\` > $HOME/.WORK_ON && ln -sfn \`workpwd\` $HOME/Work\ on"
+alias workopen="open \`workpwd\`"
+
+alias wcd="workcd"
+alias won="workon"
+alias wof="workoff"
+alias wop="workopen"
 
 # ZSH
 
