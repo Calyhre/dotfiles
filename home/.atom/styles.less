@@ -66,26 +66,36 @@
         }
       }
     }
-  }
-  .underlayer {
-    .wrap-guide {
-      background-color: rgba(255, 255, 255, 0.1);
+
+    .atom-color-highlight {
+      .region {
+        -webkit-font-smoothing: inherit;
+        padding: 0px 1px;
+      }
     }
   }
+  .wrap-guide {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 }
-.item-views > .editor {
+.editor {
   &.is-focused {
-    .cursor {
+    .cursors {
       &.blink-off {
         visibility: visible;
+      }
+      .cursor {
+        width: 7px !important;
       }
     }
     .line.cursor-line {
       background: rgba(255, 255, 255, 0.04);
     }
-    .crosshair {
-      background-color: transparent;
-      border-left: 1px solid rgba(255, 255, 255, 0.5);
+    .crosshairs {
+      .crosshair {
+        background-color: transparent;
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+      }
     }
   }
   .line.cursor-line {
