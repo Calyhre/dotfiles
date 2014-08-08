@@ -1,12 +1,21 @@
+GIT
+  remote: git://github.com/schacon/ruby-git.git
+  revision: 8425a6b6169eaeda0afe2e16b0e4210ed433caf2
+  specs:
+    git (1.2.8)
+
 GEM
   remote: http://rubygems.org/
   specs:
-    git (1.2.6)
     highline (1.6.21)
+    rainbow (2.0.0)
+    ruby-progressbar (1.5.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  git (~> 1.2.6)
-  highline (~> 1.6.21)
+  git!
+  highline
+  rainbow
+  ruby-progressbar
