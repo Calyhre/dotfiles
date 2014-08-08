@@ -43,20 +43,6 @@
     color: #F9EE98;
     text-decoration: underline;
   }
-  .search-results {
-    .marker {
-      .region {
-        background-color: green;
-        opacity: 0.2;
-      }
-    }
-    .marker.current-result {
-      .region {
-        background-color: green;
-        opacity: 0.5;
-      }
-    }
-  }
 
   .overlayer {
     .autocomplete {
@@ -107,6 +93,15 @@
     border: none;
     visibility: visible;
   }
+
+
+  &.mini{
+    &.is-focused {
+      .cursor {
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
 }
 
 .workspace {
@@ -118,5 +113,16 @@
         }
       }
     }
+  }
+}
+
+.underlayer {
+  .find-result .region {
+    background-color: green;
+    opacity: 0.2;
+  }
+  .current-result .region {
+    background-color: green;
+    opacity: 0.5;
   }
 }
