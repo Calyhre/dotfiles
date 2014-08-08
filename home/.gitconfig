@@ -22,4 +22,4 @@
 [branch]
   autosetuprebase = always
 [push]
-	default = simple
+  default = matching
