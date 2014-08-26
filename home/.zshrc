@@ -29,6 +29,7 @@ export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 eval "$(rbenv init - --no-rehash)"
 
 export PATH="$SCRIPTS:$PATH"
+export PATH="node_modules/.bin:$PATH"
 export PATH=".bin:$PATH"
 export PATH="bin:$PATH"
 
