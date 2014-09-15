@@ -47,6 +47,7 @@ Thumbs.db
 .env
 .rake_tasks
 .bin/
+.pry_history
 
 rails_best_practices_output.html
 

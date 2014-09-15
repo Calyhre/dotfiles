@@ -12,14 +12,14 @@
   autostash = true
 
 # pull will do a rebase instead of a merge
-[pull]
-  rebase = true
+#[pull]
+#  rebase = true
 
 # merge is looking harder for renames
 [merge]
   renamelimit = 3000
 
-[branch]
-  autosetuprebase = always
+#[branch]
+#  autosetuprebase = always
 [push]
   default = matching
