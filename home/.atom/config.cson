@@ -58,3 +58,5 @@
   'neverCloseUnsaved': true
 'atom-bitcoin':
   'interval': 30
+'scroll-past-end':
+  'retainHalfScreen': true

@@ -65,7 +65,7 @@
   }
 }
 .editor {
-  &.is-focused {
+  .is-focused {
     .cursors {
       &.blink-off {
         visibility: visible;
@@ -91,14 +91,15 @@
   .cursor {
     background-color: rgba(255, 255, 255, 0.2);
     border: none;
-    visibility: visible;
+    visibility: hidden;
   }
 
 
   &.mini{
     &.is-focused {
       .cursor {
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: transparent;
+        border-left: 2px solid rgba(255, 255, 255, 0.2);
       }
     }
   }
