@@ -47,6 +47,7 @@ Thumbs.db
 .env
 .rake_tasks
 .bin/
+.scripts/.scripts
 
 rails_best_practices_output.html
 
