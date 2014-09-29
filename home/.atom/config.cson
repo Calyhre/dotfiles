@@ -5,9 +5,10 @@
   'showInvisibles': true
   'preferredLineLength': 79
   'fontSize': 12
+  'invisibles': {}
 'core':
   'themes': [
-    'atom-soda-dark-ui'
+    'seti-ui'
     'railscast-theme'
   ]
   'ignoredNames': [
