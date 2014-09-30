@@ -16,15 +16,16 @@
 }
 
 .editor {
+  background-color: #1A1C1E;
   .gutter {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.02);
     border-right: 2px solid rgba(255, 255, 255, 0.04);
   }
   .line{
     .invisible-character {
       color: transparent;
       &.leading-whitespace {
-        color: rgba(255, 255, 255, 0.5);
+        color: rgba(255, 255, 255, 0.3);
       }
     }
   }
@@ -65,7 +66,7 @@
   }
 }
 .editor {
-  &.is-focused {
+  .is-focused {
     .cursors {
       &.blink-off {
         visibility: visible;
@@ -98,8 +99,8 @@
   &.mini{
     &.is-focused {
       .cursor {
-        background-color: rgba(255, 255, 255, 0.2);
-        visibility: visible;
+        background-color: transparent;
+        border-left: 2px solid rgba(255, 255, 255, 0.2);
       }
     }
   }

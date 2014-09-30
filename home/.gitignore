@@ -48,6 +48,8 @@ Thumbs.db
 .rake_tasks
 .bin/
 .pry_history
+=======
+.scripts/.scripts
 
 rails_best_practices_output.html
 
