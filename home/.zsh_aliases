@@ -63,10 +63,9 @@ alias thin="nocorrect thin"
 alias thor="nocorrect thor"
 alias npm="nocorrect npm"
 alias grunt="nocorrect grunt"
-alias guard="nocorrect guard"
+#alias guard="nocorrect guard"
 alias neat="nocorrect neat"
 alias rspec="nocorrect rspec"
-alias guard="guard --no-bundler-warning"
 alias reload="echo \`pwd\` > $HOME/.RELOAD && source ~/.zshrc"
 
 alias zshc="edit $DOTFILES/.zshrc"
@@ -178,7 +177,7 @@ production:
 alias t="ruby -Itest"
 
 function rbenv_init () {
-  echo `basename $PWD` > .rbenv-gemsets &&
+  echo ".gems" > .rbenv-gemsets &&
   echo `rbenv version | awk '{print $1;}'` > .ruby-version
 }
 
