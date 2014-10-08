@@ -63,3 +63,5 @@
   'interval': 30
 'scroll-past-end':
   'retainHalfScreen': true
+'atom-lint':
+  'showViolationMetadata': false
