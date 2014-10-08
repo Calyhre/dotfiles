@@ -6,6 +6,7 @@
   'preferredLineLength': 79
   'fontSize': 12
   'invisibles': {}
+  'scrollPastEnd': true
 'core':
   'themes': [
     'seti-ui'
