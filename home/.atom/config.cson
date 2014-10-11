@@ -5,8 +5,8 @@
   'showInvisibles': true
   'preferredLineLength': 79
   'fontSize': 12
-  'invisibles': {}
   'scrollPastEnd': true
+  'invisibles': {}
 'core':
   'themes': [
     'seti-ui'
@@ -29,7 +29,6 @@
     'exception-reporting'
     'feedback'
     'language-c'
-    'language-gfm'
     'language-go'
     'language-java'
     'language-make'
@@ -66,3 +65,4 @@
   'retainHalfScreen': true
 'atom-lint':
   'showViolationMetadata': false
+'markdown-preview': {}
