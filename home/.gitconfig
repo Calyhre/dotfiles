@@ -23,3 +23,5 @@
 #  autosetuprebase = always
 [push]
   default = matching
+[init]
+  templatedir = ~/.git_template
