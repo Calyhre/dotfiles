@@ -68,11 +68,17 @@
 .editor {
   .is-focused {
     .cursors {
-      &.blink-off {
-        visibility: visible;
-      }
       .cursor {
         width: 7px !important;
+        background-color: rgba(255, 255, 255, 0.2);
+        border: none;
+        visibility: visible;
+        opacity: 1;
+      }
+      &.blink-off {
+        .cursor {
+          opacity: 0;
+        }
       }
     }
     .line.cursor-line {
@@ -87,12 +93,6 @@
   }
   .line.cursor-line {
     background: rgba(255, 255, 255, 0.02);
-  }
-
-  .cursor {
-    background-color: rgba(255, 255, 255, 0.2);
-    border: none;
-    visibility: hidden;
   }
 
 

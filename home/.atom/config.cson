@@ -1,65 +1,68 @@
-'welcome':
-  'showOnStartup': false
-'editor':
-  'fontFamily': 'DejaVu Sans Mono'
-  'showInvisibles': true
-  'preferredLineLength': 79
-  'fontSize': 12
-  'invisibles': {}
-'core':
-  'themes': [
-    'seti-ui'
-    'railscast-theme'
-  ]
-  'ignoredNames': [
-    '.git'
-    '.svn'
-    '.DS_Store'
-    '.cache'
-    '.sass-cache'
-    'tmp'
-    'log'
-    'bundle'
-    '.bundle'
-    'node_modules'
-  ]
-  'disabledPackages': [
-    'metrics'
-    'exception-reporting'
-    'feedback'
-    'language-c'
-    'language-gfm'
-    'language-go'
-    'language-java'
-    'language-make'
-    'language-objective-c'
-    'language-perl'
-    'language-property-list'
-    'language-python'
-    'language-sql'
-    'language-toml'
-    'link'
-    'release-notes'
-    'snippets'
-    'welcome'
-    'nbsp-detect'
-  ]
-'autosave':
-  'enabled': true
-'spell-check':
-  'grammars': [
-    'source.gfm'
-    'text.git-commit'
-    'text.plain'
-  ]
-'tree-view':
-  'hideIgnoredNames': true
-'whitespace':
-  'ignoreWhitespaceOnCurrentLine': false
-'zentabs':
-  'maximumOpenedTabs': 10
-  'neverCloseUnsaved': true
-'atom-bitcoin':
-  'interval': 30
-'scroll-past-end':
-  'retainHalfScreen': true
+'global':
+  'welcome':
+    'showOnStartup': false
+  'editor':
+    'fontFamily': 'DejaVu Sans Mono'
+    'showInvisibles': true
+    'preferredLineLength': 79
+    'fontSize': 12
+    'invisibles': {}
+  'core':
+    'themes': [
+      'seti-ui'
+      'railscast-theme'
+    ]
+    'ignoredNames': [
+      '.git'
+      '.svn'
+      '.DS_Store'
+      '.cache'
+      '.sass-cache'
+      'tmp'
+      'log'
+      'bundle'
+      '.bundle'
+      'node_modules'
+      '.gems'
+      '.rbenv-gemsets'
+      '.bin'
+    ]
+    'disabledPackages': [
+      'metrics'
+      'exception-reporting'
+      'feedback'
+      'language-c'
+      'language-go'
+      'language-java'
+      'language-make'
+      'language-objective-c'
+      'language-perl'
+      'language-property-list'
+      'language-python'
+      'language-sql'
+      'language-toml'
+      'link'
+      'release-notes'
+      'snippets'
+      'welcome'
+      'nbsp-detect'
+    ]
+  'autosave':
+    'enabled': true
+  'spell-check':
+    'grammars': [
+      'source.gfm'
+      'text.git-commit'
+      'text.plain'
+    ]
+  'tree-view':
+    'hideIgnoredNames': true
+  'whitespace':
+    'ignoreWhitespaceOnCurrentLine': false
+  'zentabs':
+    'maximumOpenedTabs': 10
+    'neverCloseUnsaved': true
+  'atom-bitcoin':
+    'interval': 30
+  'scroll-past-end':
+    'retainHalfScreen': true
