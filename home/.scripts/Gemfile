@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-ruby '2.1.2'
+ruby '2.1.3'
 
 gem 'git', github: 'schacon/ruby-git'
 gem 'ruby-progressbar'
