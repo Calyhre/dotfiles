@@ -202,11 +202,7 @@ function gclean () {
  }
 
 function gi() {
-  if [ -z "$1" ]; then
-    not_ok 'gitignore: you must provide operating system, programming language, or IDE keywords'
-  else
-    curl --silent http://www.gitignore.io/api/$1
-  fi
+  curl -L -s https://www.gitignore.io/api/$@;
 }
 
 function gpr() {
