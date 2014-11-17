@@ -286,6 +286,16 @@ function dbdump () {
   fi
 }
 
+transfer() {
+  # write to output to tmpfile because of progress bar
+  tmpfile=$( mktemp -t transferXXX );
+  curl --progress-bar --upload-file $1 https://transfer.sh/$(basename $1) >> $tmpfile;
+  cat $tmpfile;
+  rm -f $tmpfile;
+}
+
+alias transfer=transfer
+
 function repeat() {
     while [ $(( $1 -= 1 )) -ge 0 ]; do
         "$@"
