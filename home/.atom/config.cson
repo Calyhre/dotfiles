@@ -6,7 +6,6 @@
     'showInvisibles': true
     'preferredLineLength': 79
     'fontSize': 12
-    'invisibles': {}
   'core':
     'themes': [
       'seti-ui'
@@ -26,6 +25,9 @@
       '.gems'
       '.rbenv-gemsets'
       '.bin'
+      '*.log'
+      '.pry_history'
+      '.rake_tasks'
     ]
     'disabledPackages': [
       'metrics'
@@ -46,6 +48,7 @@
       'snippets'
       'welcome'
       'nbsp-detect'
+      'atom-lint'
     ]
   'autosave':
     'enabled': true
@@ -66,3 +69,9 @@
     'interval': 30
   'scroll-past-end':
     'retainHalfScreen': true
+  'linter':
+    'lintOnChangeInterval': 3000
+    'lintOnChange': false
+    'showHighlighting': false
+    'showErrorInline': true
+    'statusBar': 'Show error if the cursor is in range'
