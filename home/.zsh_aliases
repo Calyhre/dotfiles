@@ -231,11 +231,17 @@ function gpr() {
   fi
 }
 
-function gtag () {
+function gt () {
   if [ -z "$1" ]; then
-    red 'bumping version: missing required argument version number'
+    not_ok 'gt: missing required argument version number'
   else
-    git tag v$1
+    if [[ $1 == v* ]]; then
+      TAG=$1
+    else
+      TAG=v$1
+    fi
+
+    git tag $TAG
     ggpush --tags
   fi
 }
