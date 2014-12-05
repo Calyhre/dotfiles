@@ -6,6 +6,7 @@
     'showInvisibles': true
     'preferredLineLength': 79
     'fontSize': 12
+    'autoIndentOnPaste': false
   'core':
     'themes': [
       'seti-ui'
