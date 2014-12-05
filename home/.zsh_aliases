@@ -231,6 +231,15 @@ function gpr() {
   fi
 }
 
+function gtag () {
+  if [ -z "$1" ]; then
+    red 'bumping version: missing required argument version number'
+  else
+    git tag v$1
+    ggpush --tags
+  fi
+}
+
 # HEROKU
 
 alias he="heroku"
