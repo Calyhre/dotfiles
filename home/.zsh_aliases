@@ -309,6 +309,7 @@ transfer() {
   rm -f $tmpfile;
 }
 
+alias nope='echo -n ಠ_ಠ | LANG=en_US.UTF-8 pbcopy'
 alias transfer=transfer
 
 function repeat() {
