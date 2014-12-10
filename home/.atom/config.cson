@@ -49,7 +49,6 @@
       'snippets'
       'welcome'
       'nbsp-detect'
-      'atom-lint'
     ]
   'autosave':
     'enabled': true
