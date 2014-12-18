@@ -250,7 +250,8 @@ function gt () {
 
 alias he="heroku"
 alias hew="watch heroku ps --app"
-alias hrake="heroku run rake"
+alias her="heroku run"
+alias hec="heroku run console"
 
 function hedumpdb () {
   if [ -z "$1" ]; then

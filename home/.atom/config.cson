@@ -8,6 +8,7 @@
     'fontSize': 12
     'autoIndentOnPaste': false
     'scrollPastEnd': true
+    'invisibles': {}
   'core':
     'themes': [
       'seti-ui'
