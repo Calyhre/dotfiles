@@ -188,6 +188,7 @@ alias gd="git diff --ignore-space-at-eol -b -w --ignore-blank-lines"
 alias gds="git diff --staged"
 alias gap="git add -p"
 alias gsync="git fetch upstream && git rebase upstream/master"
+alias nope="git commit -m 'ಠ_ಠ'"
 
 # Fix oh-my-zsh's git plugin conflict
 if type gclean > /dev/null; then
@@ -310,7 +311,7 @@ transfer() {
   rm -f $tmpfile;
 }
 
-alias nope='echo -n ಠ_ಠ | LANG=en_US.UTF-8 pbcopy'
+alias lod='echo -n ಠ_ಠ | LANG=en_US.UTF-8 pbcopy'
 alias transfer=transfer
 
 function repeat() {
