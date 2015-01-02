@@ -9,6 +9,7 @@
     'autoIndentOnPaste': false
     'scrollPastEnd': true
     'invisibles': {}
+    'softWrapAtPreferredLineLength': true
   'core':
     'themes': [
       'seti-ui'
