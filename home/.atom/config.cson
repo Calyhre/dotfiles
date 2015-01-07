@@ -8,8 +8,8 @@
     'fontSize': 12
     'autoIndentOnPaste': false
     'scrollPastEnd': true
-    'invisibles': {}
     'softWrapAtPreferredLineLength': true
+    'invisibles': {}
   'core':
     'themes': [
       'seti-ui'
@@ -52,6 +52,7 @@
       'snippets'
       'welcome'
       'nbsp-detect'
+      'atom-lint'
     ]
   'autosave':
     'enabled': true
@@ -78,3 +79,4 @@
     'showHighlighting': false
     'showErrorInline': true
     'statusBar': 'Show error if the cursor is in range'
+  'atom-lint': {}
