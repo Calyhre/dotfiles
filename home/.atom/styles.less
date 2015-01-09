@@ -17,8 +17,17 @@
 
 .editor {
   background-color: #1A1C1E;
-
+  .crosshairs {
+    .crosshair {
+      background-color: transparent;
+      border-left: 1px solid rgba(255, 255, 255, 0.5);
+    }
+  }
+  .wrap-guide {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 }
+
 .editor::shadow {
   .gutter {
     background: rgba(255, 255, 255, 0.02);
@@ -64,9 +73,6 @@
       }
     }
   }
-  .wrap-guide {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
   .is-focused {
     .cursors {
       .cursor {
@@ -84,12 +90,6 @@
     }
     .line.cursor-line {
       background: rgba(255, 255, 255, 0.04);
-    }
-    .crosshairs {
-      .crosshair {
-        background-color: transparent;
-        border-left: 1px solid rgba(255, 255, 255, 0.5);
-      }
     }
   }
   .line.cursor-line {
