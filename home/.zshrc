@@ -32,6 +32,10 @@ export PATH="$SCRIPTS:$PATH"
 export PATH="node_modules/.bin:$PATH"
 export PATH=".bin:$PATH"
 export PATH="bin:$PATH"
+export PATH="$HOME/Library/Android/sdk/tools:$PATH"
+export PATH="$HOME/Library/Android/sdk/build-tools:$PATH"
+export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
+
 
 # Change dir
 if [ -f ~/.RELOAD ]; then

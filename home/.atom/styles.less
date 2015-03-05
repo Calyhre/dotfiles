@@ -37,7 +37,7 @@
     .invisible-character {
       color: transparent;
       &.leading-whitespace {
-        color: rgba(255, 255, 255, 0.3);
+        color: rgba(255, 255, 255, 0.05);
       }
     }
   }
@@ -73,6 +73,18 @@
       }
     }
   }
+
+  .underlayer {
+    .find-result .region {
+      background-color: green;
+      opacity: 0.2;
+    }
+    .current-result .region {
+      background-color: green;
+      opacity: 0.5;
+    }
+  }
+
   .is-focused {
     .cursors {
       .cursor {
@@ -116,16 +128,5 @@
         }
       }
     }
-  }
-}
-
-.underlayer {
-  .find-result .region {
-    background-color: green;
-    opacity: 0.2;
-  }
-  .current-result .region {
-    background-color: green;
-    opacity: 0.5;
   }
 }

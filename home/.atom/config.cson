@@ -1,82 +1,76 @@
-'global':
-  'welcome':
-    'showOnStartup': false
-  'editor':
-    'fontFamily': 'DejaVu Sans Mono'
-    'showInvisibles': true
-    'preferredLineLength': 79
-    'fontSize': 12
-    'autoIndentOnPaste': false
-    'scrollPastEnd': true
-    'softWrapAtPreferredLineLength': true
-    'invisibles': {}
-  'core':
-    'themes': [
-      'seti-ui'
-      'railscast-theme'
+"*":
+  welcome:
+    showOnStartup: false
+  editor:
+    fontFamily: "DejaVu Sans Mono"
+    fontSize: 12
+    showInvisibles: true
+    autoIndentOnPaste: false
+    softWrapAtPreferredLineLength: true
+    scrollPastEnd: true
+    invisibles: {}
+  core:
+    ignoredNames: [
+      ".git"
+      ".svn"
+      ".DS_Store"
+      ".cache"
+      ".sass-cache"
+      "tmp"
+      "log"
+      "bundle"
+      ".bundle"
+      "node_modules"
+      ".gems"
+      ".rbenv-gemsets"
+      ".bin"
+      "*.log"
+      ".pry_history"
+      ".rake_tasks"
     ]
-    'ignoredNames': [
-      '.git'
-      '.svn'
-      '.DS_Store'
-      '.cache'
-      '.sass-cache'
-      'tmp'
-      'log'
-      'bundle'
-      '.bundle'
-      'node_modules'
-      '.gems'
-      '.rbenv-gemsets'
-      '.bin'
-      '*.log'
-      '.pry_history'
-      '.rake_tasks'
+    disabledPackages: [
+      "metrics"
+      "exception-reporting"
+      "feedback"
+      "language-c"
+      "language-go"
+      "language-make"
+      "language-objective-c"
+      "language-perl"
+      "language-property-list"
+      "language-python"
+      "language-toml"
+      "link"
+      "release-notes"
+      "welcome"
+      "nbsp-detect"
     ]
-    'disabledPackages': [
-      'metrics'
-      'exception-reporting'
-      'feedback'
-      'language-c'
-      'language-go'
-      'language-java'
-      'language-make'
-      'language-objective-c'
-      'language-perl'
-      'language-property-list'
-      'language-python'
-      'language-sql'
-      'language-toml'
-      'link'
-      'release-notes'
-      'snippets'
-      'welcome'
-      'nbsp-detect'
-      'atom-lint'
+    themes: [
+      "seti-ui"
+      "railscast-theme"
     ]
-  'autosave':
-    'enabled': true
-  'spell-check':
-    'grammars': [
-      'source.gfm'
-      'text.git-commit'
-      'text.plain'
+  autosave:
+    enabled: true
+  "spell-check":
+    grammars: [
+      "source.gfm"
+      "text.git-commit"
+      "text.plain"
     ]
-  'tree-view':
-    'hideIgnoredNames': true
-  'whitespace':
-    'ignoreWhitespaceOnCurrentLine': false
-  'zentabs':
-    'maximumOpenedTabs': 10
-    'neverCloseUnsaved': true
-  'atom-bitcoin':
-    'interval': 30
-  'scroll-past-end':
-    'retainHalfScreen': true
-  'linter':
-    'lintOnChangeInterval': 3000
-    'lintOnChange': false
-    'showHighlighting': false
-    'showErrorInline': true
-    'statusBar': 'Show error if the cursor is in range'
-  'atom-lint': {}
+  "tree-view":
+    hideIgnoredNames: true
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
+  zentabs:
+    maximumOpenedTabs: 10
+    neverCloseUnsaved: true
+  linter:
+    lintOnChange: false
+    lintOnChangeInterval: 3000
+    showErrorInline: true
+    statusBar: "Show error if the cursor is in range"
+  jsxTagStartPattern: "(?x)((^|=|return)\\s*<([^!/?](?!.+?(</.+?>))))"
+  jsxComplexAttributePattern: "(?x)\\{ [^}\"']* $|\\( [^)\"']* $"
+  decreaseIndentForNextLinePattern: "/>\\s*,?\\s*$"
+  react: {}
+  "linter-jshint": {}
