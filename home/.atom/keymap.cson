@@ -18,10 +18,14 @@
 #
 
 
-'.editor':
+'atom-text-editor':
   # Fucking Sublime habits ...
   'alt-shift-up':   'core:select-up'
   'alt-shift-down': 'core:select-down'
+  'alt-space':      'editor:insert-space'
 
 'body':
   'ctrl-alt-z': 'pane:split-left'
+
+'.tree-view':
+  'enter': 'tree-view:rename'

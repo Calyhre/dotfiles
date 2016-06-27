@@ -1,82 +1,166 @@
-'global':
-  'welcome':
-    'showOnStartup': false
-  'editor':
-    'fontFamily': 'DejaVu Sans Mono'
-    'showInvisibles': true
-    'preferredLineLength': 79
-    'fontSize': 12
-    'autoIndentOnPaste': false
-    'scrollPastEnd': true
-    'softWrapAtPreferredLineLength': true
-    'invisibles': {}
-  'core':
-    'themes': [
-      'seti-ui'
-      'railscast-theme'
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "789fd143-de06-47a8-91a8-eba73ff9ac43"
+    js:
+      indent_size: 2
+  "atom-lint": {}
+  "auto-update-packages": {}
+  autosave:
+    enabled: true
+  core:
+    closeEmptyWindows: false
+    disabledPackages: [
+      "metrics"
+      "exception-reporting"
+      "language-c"
+      "language-java"
+      "language-make"
+      "language-objective-c"
+      "language-perl"
+      "language-property-list"
+      "language-python"
+      "language-sql"
+      "language-toml"
+      "link"
+      "welcome"
+      "language-mustache"
+      "language-csharp"
+      "language-clojure"
+      "autocomplete-css"
+      "language-mongodb"
+      "wrap-guide"
+      "atom-prettify"
+      "about"
+      "autocomplete-snippets"
+      "background-tips"
+      "bookmarks"
+      "deprecation-cop"
+      "dev-live-reload"
+      "encoding-selector"
+      "language-go"
+      "language-hyperlink"
+      "language-php"
+      "package-generator"
+      "snippets"
     ]
-    'ignoredNames': [
-      '.git'
-      '.svn'
-      '.DS_Store'
-      '.cache'
-      '.sass-cache'
-      'tmp'
-      'log'
-      'bundle'
-      '.bundle'
-      'node_modules'
-      '.gems'
-      '.rbenv-gemsets'
-      '.bin'
-      '*.log'
-      '.pry_history'
-      '.rake_tasks'
+    ignoredNames: [
+      ".git"
+      ".svn"
+      ".DS_Store"
+      ".cache"
+      ".sass-cache"
+      "tmp"
+      "log"
+      "bundle"
+      ".bundle"
+      "node_modules"
+      ".gems"
+      ".rbenv-gemsets"
+      ".bin"
+      "*.log"
+      ".pry_history"
+      ".rake_tasks"
+      ".rvmrc"
+      ".ruby-version"
+      ".rspec"
     ]
-    'disabledPackages': [
-      'metrics'
-      'exception-reporting'
-      'feedback'
-      'language-c'
-      'language-go'
-      'language-java'
-      'language-make'
-      'language-objective-c'
-      'language-perl'
-      'language-property-list'
-      'language-python'
-      'language-sql'
-      'language-toml'
-      'link'
-      'release-notes'
-      'snippets'
-      'welcome'
-      'nbsp-detect'
-      'atom-lint'
+    openEmptyEditorOnStart: false
+    projectHome: "/Users/Charley/Developer"
+    themes: [
+      "seti-ui_legacy"
+      "railscast-theme"
     ]
-  'autosave':
-    'enabled': true
-  'spell-check':
-    'grammars': [
-      'source.gfm'
-      'text.git-commit'
-      'text.plain'
+  editor:
+    backUpBeforeSaving: true
+    fontFamily: "DejaVu Sans Mono"
+    fontSize: 11
+    invisibles: {}
+    scrollPastEnd: true
+    showInvisibles: true
+    softWrapAtPreferredLineLength: true
+  "find-and-replace":
+    openProjectFindResultsInRightPane: true
+  "fuzzy-finder":
+    ignoredNames: [
+      "doc"
+      "log"
+      "tmp"
     ]
-  'tree-view':
-    'hideIgnoredNames': true
-  'whitespace':
-    'ignoreWhitespaceOnCurrentLine': false
-  'zentabs':
-    'maximumOpenedTabs': 10
-    'neverCloseUnsaved': true
-  'atom-bitcoin':
-    'interval': 30
-  'scroll-past-end':
-    'retainHalfScreen': true
-  'linter':
-    'lintOnChangeInterval': 3000
-    'lintOnChange': false
-    'showHighlighting': false
-    'showErrorInline': true
-    'statusBar': 'Show error if the cursor is in range'
-  'atom-lint': {}
+    preserveLastSearch: true
+  linter:
+    errorPanelHeight: 44
+    ignoredLinterErrors: [
+      "rubocop"
+      "ruby"
+    ]
+    lintOnChange: false
+    lintOnChangeInterval: 3000
+    lintOnFly: false
+    showErrorTabLine: true
+    statusBar: "Show error of the selected line"
+  "linter-eslint": {}
+  "linter-jshint": {}
+  "linter-rubocop": {}
+  "linter-slim":
+    rails: true
+  "markdown-preview": {}
+  "multi-wrap-guide":
+    columns: [
+      80
+      100
+    ]
+    locked: true
+    rows: [
+      100
+    ]
+    silent: true
+  "one-dark-ui":
+    layoutMode: "Compact"
+  react:
+    enabledForAllJavascriptFiles: true
+  rspec:
+    command: "foreman run bundle exec rspec"
+    force_colored_results: false
+    save_before_run: true
+  "scroll-past-end":
+    retainHalfScreen: true
+  "seti-ui":
+    compactView: true
+    themeColor: "Steel"
+  "spell-check":
+    grammars: [
+      "source.gfm"
+      "text.git-commit"
+      "text.plain"
+    ]
+  "tree-view":
+    focusOnReveal: false
+    hideIgnoredNames: true
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
+  zentabs:
+    maximumOpenedTabs: 16
+    neverCloseDirty: true
+    neverCloseUnsaved: true
+".coffee.jsx.source":
+  editor:
+    preferredLineLength: 109
+".coffee.source":
+  editor:
+    preferredLineLength: 109
+  "multi-wrap-guide":
+    columns: [
+      109
+    ]
+".jade.source":
+  whitespace:
+    removeTrailingWhitespace: true
+".slim.text":
+  editor:
+    autoIndent: true
+    autoIndentOnPaste: true
+  whitespace:
+    removeTrailingWhitespace: true

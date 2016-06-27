@@ -8,14 +8,27 @@
  * http://www.lesscss.org
  */
 
-.tree-view {
-  font-size: 11px;
-  .list-tree li.list-nested-item > .list-item {
-    line-height: 22px;
+@media (-webkit-max-device-pixel-ratio: 1) {
+  body {
+    -webkit-font-smoothing: antialiased;
   }
 }
 
-.editor {
+.tree-view {
+  font-size: 11px;
+  .list-tree {
+    .entry {
+      &:before {
+        height: 22px;
+      }
+      .list-item {
+        line-height: 22px;
+      }
+    }
+  }
+}
+
+atom-text-editor {
   background-color: #1A1C1E;
   .crosshairs {
     .crosshair {
@@ -23,12 +36,9 @@
       border-left: 1px solid rgba(255, 255, 255, 0.5);
     }
   }
-  .wrap-guide {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
 }
 
-.editor::shadow {
+atom-text-editor::shadow {
   .gutter {
     background: rgba(255, 255, 255, 0.02);
     border-right: 2px solid rgba(255, 255, 255, 0.04);
@@ -37,13 +47,36 @@
     .invisible-character {
       color: transparent;
       &.leading-whitespace {
-        color: rgba(255, 255, 255, 0.3);
+        color: rgba(255, 255, 255, 0.05);
       }
     }
   }
 
   .line-number.cursor-line-no-selection {
     background: rgba(0, 0, 0, 0.3);
+  }
+
+  .multi-wrap-guide-view {
+    .vertical {
+      .multi-wrap-guide:nth-child(1) {
+        .multi-wrap-guide-line {
+          background-color: rgba(255, 255, 255, .05);
+        }
+      }
+      .multi-wrap-guide:nth-child(2) {
+        .multi-wrap-guide-line {
+          background-color: rgba(255, 255, 255, .1);
+        }
+      }
+    }
+
+    .horizontal {
+      .multi-wrap-guide {
+        .multi-wrap-guide-line {
+          background-color: rgba(255, 255, 255, .025);
+        }
+      }
+    }
   }
 
   .invalid.illegal {
@@ -91,9 +124,16 @@
     .line.cursor-line {
       background: rgba(255, 255, 255, 0.04);
     }
+    ruler-view.rulerz {
+      border-left: 1px dashed rgba(255, 255, 255, 0.1);
+    }
   }
   .line.cursor-line {
     background: rgba(255, 255, 255, 0.02);
+  }
+
+  .linter-highlight .region {
+    background-color: rgba(71, 77, 92, .2);
   }
 
 
@@ -107,7 +147,11 @@
   }
 }
 
-.workspace {
+atom-pane-container atom-pane {
+
+}
+
+atom-workspace {
   .select-list {
     &.fuzzy-finder {
       .list-group {

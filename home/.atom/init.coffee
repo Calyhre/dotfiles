@@ -12,3 +12,6 @@
 #   editor = editorView.getEditor()
 #   if path.extname(editor.getPath()) is '.md'
 #     editor.setSoftWrap(true)
+
+atom.commands.add 'atom-text-editor', 'editor:insert-space', ->
+  editor = atom.workspace.getActiveTextEditor()?.insertText(' ')
