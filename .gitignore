@@ -4,3 +4,6 @@ Package\ Control.system-ca-bundle
 Package\ Control.ca-bundle
 Package\ Control.ca-list
 .DS_Store
+
+home/.atom/.apm
+home/.atom/blob-store/

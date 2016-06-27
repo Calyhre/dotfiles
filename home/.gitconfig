@@ -3,6 +3,11 @@
 	excludesfile = ~/.gitignore
 [color]
   ui = true
+[color "diff-highlight"]
+  oldNormal = "red bold"
+  oldHighlight = "red bold 52"
+  newNormal = "green bold"
+  newHighlight = "green bold 22"
 [include]
   path = ~/.gitconfig_secret
 
@@ -21,7 +26,15 @@
 
 #[branch]
 #  autosetuprebase = always
-[push]
-  default = matching
+# [push]
+# 	default = current
 [init]
   templatedir = ~/.git_template
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[push]
+	default = current
+[user]
+	useconfigonly = true
