@@ -13,3 +13,15 @@
 #     'prefix': 'log'
 #     'body': 'console.log $1'
 #
+
+'.source.js*':
+  'console.log':
+    'prefix': 'log'
+    'body': 'console.log(${1});$2'
+  'function':
+    'prefix': 'fun'
+    'body': """
+      function (${1:params}) {
+        $2
+      }
+    """

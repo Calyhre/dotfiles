@@ -106,6 +106,18 @@ atom-text-editor::shadow {
       }
     }
   }
+
+  .underlayer {
+    .find-result .region {
+      background-color: green;
+      opacity: 0.2;
+    }
+    .current-result .region {
+      background-color: green;
+      opacity: 0.5;
+    }
+  }
+
   .is-focused {
     .cursors {
       .cursor {
@@ -160,16 +172,5 @@ atom-workspace {
         }
       }
     }
-  }
-}
-
-.underlayer {
-  .find-result .region {
-    background-color: green;
-    opacity: 0.2;
-  }
-  .current-result .region {
-    background-color: green;
-    opacity: 0.5;
   }
 }
