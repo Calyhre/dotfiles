@@ -8,6 +8,15 @@
  * http://www.lesscss.org
  */
 
+atom-text-editor {
+  text-rendering: optimizeLegibility;
+}
+
+atom-text-editor::shadow .string.quoted,
+atom-text-editor::shadow .string.regexp {
+  -webkit-font-feature-settings: "liga" off, "calt" off;
+}
+
 @media (-webkit-max-device-pixel-ratio: 1) {
   body {
     -webkit-font-smoothing: antialiased;
@@ -36,6 +45,11 @@ atom-text-editor {
       border-left: 1px solid rgba(255, 255, 255, 0.5);
     }
   }
+}
+
+atom-text-editor::shadow  .bracket-matcher .region {
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 atom-text-editor::shadow {

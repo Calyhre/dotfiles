@@ -214,7 +214,7 @@ production:
 alias t="ruby -Itest"
 
 function rbenv_init () {
-  echo ".gems" > .rbenv-gemsets &&
+  echo `basename \`pwd\`` > .rbenv-gemsets &&
   echo `rbenv version | awk '{print $1;}'` > .ruby-version
 }
 

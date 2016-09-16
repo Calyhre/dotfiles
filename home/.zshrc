@@ -20,7 +20,7 @@ setopt hist_ignore_space
 setopt hist_verify
 setopt inc_append_history
 
-plugins=(git rails rake-fast zsh-syntax-highlighting history-substring-search)
+plugins=(git rails rake-fast zsh-syntax-highlighting history-substring-search colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 

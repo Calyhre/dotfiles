@@ -4,6 +4,8 @@
       _analyticsUserId: "789fd143-de06-47a8-91a8-eba73ff9ac43"
     js:
       indent_size: 2
+    json:
+      brace_style: "expand"
   "atom-lint": {}
   "auto-update-packages": {}
   autosave:
@@ -38,11 +40,10 @@
       "deprecation-cop"
       "dev-live-reload"
       "encoding-selector"
-      "language-go"
       "language-hyperlink"
       "language-php"
       "package-generator"
-      "snippets"
+      "language-javascript"
     ]
     ignoredNames: [
       ".git"
@@ -69,12 +70,12 @@
     projectHome: "/Users/Charley/Developer"
     themes: [
       "seti-ui_legacy"
-      "railscast-theme"
+      "solarized-dark-syntax"
     ]
   editor:
     backUpBeforeSaving: true
-    fontFamily: "DejaVu Sans Mono"
-    fontSize: 11
+    fontFamily: "Fira Code"
+    fontSize: 12
     invisibles: {}
     scrollPastEnd: true
     showInvisibles: true
@@ -88,8 +89,9 @@
       "tmp"
     ]
     preserveLastSearch: true
+  "language-babel": {}
   linter:
-    errorPanelHeight: 44
+    errorPanelHeight: 56
     ignoredLinterErrors: [
       "rubocop"
       "ruby"
@@ -101,7 +103,8 @@
     statusBar: "Show error of the selected line"
   "linter-eslint": {}
   "linter-jshint": {}
-  "linter-rubocop": {}
+  "linter-rubocop":
+    command: "rubocop --cache true"
   "linter-slim":
     rails: true
   "markdown-preview": {}
